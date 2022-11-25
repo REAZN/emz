@@ -1,0 +1,39 @@
+---
+import { Icon } from "astro-icon";
+import { social, links } from "../config";
+---
+
+<nav class="h-24 absolute w-full">
+    <div class="flex justify-between center h-full items-center">
+        <ul class="flex space-x-6 uppercase font-semibold tracking-tight">
+            {links.map(link => (
+                <li><a class="p-2 link" href={`#${link.replace(" ", "")}`}>{link}</a></li>
+            ))}
+        </ul>
+        <ul class="flex items-center space-x-6 text-lg uppercase font-medium">
+            {social.map(social => (
+                <li>
+                    <a href={social.url} target="_blank" rel="noreferrer">
+                        <Icon name={social.icon} className="h-6" />
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .link::after {
+        content: "";
+        /* display: block; */
+        transform: scaleX(0);
+        width: 2em;
+        margin: auto;
+        transition: transform 250ms ease-in-out;
+        border-bottom: 2px solid theme("colors.text");
+    }
+
+    .active::after {
+        transform: scaleX(1);
+    }
+</style>
