@@ -1,0 +1,14 @@
+---
+export interface Props {
+    colors?: string;
+    weight?: string;
+    border?: boolean;
+    href?: string;
+}
+
+const { colors = "text-background bg-text", weight, border = false, href = "/" } = Astro.props;
+---
+
+<a href={href} class={`${border && "ring-4 ring-inset ring-accent"} ${colors} ${weight} px-8 py-1.5 box-border`}>
+    <slot />
+</a>
