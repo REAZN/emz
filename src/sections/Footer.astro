@@ -1,0 +1,39 @@
+---
+import { Icon } from "astro-icon";
+import { social, details } from "../config";
+---
+
+<footer>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:center">
+        <div class="bg-backgroundAlt flex flex-col justify-center items-center aspect-square gap-6">
+            <img src="/images/logo.svg" width="220" alt="Em'z"/>
+            <span class="font-bold text-sm">GET IN TOUCH</span>
+            <ul class="flex items-center space-x-4 text-lg uppercase font-medium">
+                {social.map(social => (
+                    <li class="hover:scale-110 transition-transform">
+                        <a href={social.url} target="_blank" rel="noreferrer">
+                            <Icon name={social.icon} className="h-6" />
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <div class="bg-accent flex flex-col justify-center items-center aspect-square">
+            <div class="aspect-square space-y-6">
+                <h2 class="font-bold text-3xl">FIND US</h2>
+                <h3 class="font-bold text-xl">ADDRESS</h3>
+                <span class="whitespace-pre-wrap font-medium">{details.address}</span>
+                <h3 class="font-bold text-xl">HOURS</h3>
+                <span class="whitespace-pre-wrap font-medium uppercase">{details.hours}</span>
+            </div>
+        </div>
+        <div class="bg-blue-400 w-full aspect-square">
+            <iframe 
+                class="w-full h-full"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ89QP_uZDe0gRI1bWQZb4ZEE&key=AIzaSyD15nLvr8SerIu1SgF8Y6JrO9fqNHocxbY">
+            </iframe>
+        </div>
+    </div>
+</footer>
