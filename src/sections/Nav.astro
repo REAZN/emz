@@ -3,24 +3,24 @@ import { Icon } from "astro-icon";
 import { social, links } from "../config";
 ---
 
-<nav class="h-24 absolute w-full">
-    <div class="flex justify-between center h-full items-center">
-        <ul class="flex space-x-6 uppercase font-semibold tracking-tight">
+<header class="h-24 absolute w-full overflow-hidden">
+    <nav class="flex justify-between center h-full items-center">
+        <ul class="flex sm:space-x-6 uppercase font-semibold tracking-tight w-full justify-evenly sm:justify-start">
             {links.map(link => (
-                <li><a class="p-2 link" href={`#${link.replace(" ", "")}`}>{link}</a></li>
+                <li><a class="p-2" href={`#${link.replace(" ", "")}`}>{link}</a></li>
             ))}
         </ul>
-        <ul class="flex items-center space-x-6 text-lg uppercase font-medium">
+        <ul class="hidden sm:flex items-center space-x-2 sm:space-x-6 text-lg uppercase font-medium">
             {social.map(social => (
-                <li>
+                <li class="hover:scale-110 transition-transform">
                     <a href={social.url} target="_blank" rel="noreferrer">
                         <Icon name={social.icon} className="h-6" />
                     </a>
                 </li>
             ))}
         </ul>
-    </div>
-</nav>
+    </nav>
+</header>
 
 <style>
     .link::after {
@@ -33,7 +33,15 @@ import { social, links } from "../config";
         border-bottom: 2px solid theme("colors.text");
     }
 
-    .active::after {
+    .active {
+        background: blue;
         transform: scaleX(1);
     }
 </style>
+
+<script>
+    document.querySelectorAll("a[href^='#']").forEach(el => el.addEventListener("click", () => {
+        console.log("HEHHEHHAW", el)
+        el.className += " active"
+    }))
+</script>
