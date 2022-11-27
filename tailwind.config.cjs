@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				"inter": ["Inter", "sans-serif"],
+				"stix": ["STIX Two Text", "serif"],
 			},
 			colors: {
 				text: "#222222",

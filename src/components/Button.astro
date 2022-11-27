@@ -9,6 +9,11 @@ export interface Props {
 const { colors = "text-background bg-text", weight, border = false, href = "/" } = Astro.props;
 ---
 
-<a href={href} class={`${border && "ring-4 ring-inset ring-accent"} ${colors} ${weight} px-8 py-1.5 box-border`}>
+<a href={href} class={`
+        ${border && "ring-2 ring-inset ring-accent"}
+        ${colors}
+        ${weight}
+        px-8 py-1.5 box-border text-center hover:scale-105 transition-transform
+    `}>
     <slot />
 </a>
