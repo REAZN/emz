@@ -4,8 +4,9 @@ import { social, details } from "../config";
 ---
 
 <footer>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:center mb-10">
-        <div class="bg-backgroundAlt flex flex-col justify-center items-center aspect-square gap-6">
+    <div id="grid" class="grid grid-cols-1 md:center sm:mb-10">
+
+        <div class="bg-backgroundAlt flex flex-col justify-center items-center aspect-square sm:aspect-auto sm:py-14 gap-6 order-3 lg:order-1">
             <img src="/images/logo.svg" width="220" alt="Em'z"/>
             <span class="font-bold text-sm">GET IN TOUCH</span>
             <ul class="flex items-center space-x-4 text-lg uppercase font-medium">
@@ -18,7 +19,8 @@ import { social, details } from "../config";
                 ))}
             </ul>
         </div>
-        <div class="bg-accent flex flex-col justify-center items-center aspect-square">
+
+        <div class="bg-accent flex flex-col justify-center items-center aspect-square order-1">
             <div class="aspect-square space-y-6">
                 <h2 class="font-bold text-3xl">FIND US</h2>
                 <h3 class="font-bold text-xl">ADDRESS</h3>
@@ -27,7 +29,8 @@ import { social, details } from "../config";
                 <span class="whitespace-pre-wrap font-medium uppercase">{details.hours}</span>
             </div>
         </div>
-        <div class="bg-blue-400 w-full aspect-square">
+
+        <div class="bg-blue-400 w-full aspect-square order-2">
             <!-- It's a restricted key -->
             <iframe 
                 class="w-full h-full"
@@ -36,5 +39,26 @@ import { social, details } from "../config";
                 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ89QP_uZDe0gRI1bWQZb4ZEE&key=AIzaSyD15nLvr8SerIu1SgF8Y6JrO9fqNHocxbY">
             </iframe>
         </div>
+
     </div>
 </footer>
+
+<style>
+    @media screen(sm) {
+        #grid {
+            grid-template-columns: 1fr 1fr;
+        }
+        #grid > :nth-child(1) {
+            grid-column: span 2;
+        }
+    }
+
+    @media screen(lg) {
+        #grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        #grid > :nth-child(1) {
+            grid-column: span 1;
+        }
+    }
+</style>

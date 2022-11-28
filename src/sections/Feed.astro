@@ -7,9 +7,10 @@ import { posts } from "../config";
         <div class="w-[2px] h-10 bg-accent"/>
         <h2 class="font-bold text-sm">WHAT WE'VE DONE</h2>
     </div>
-    <ul class="grid grid-cols-3 lg:grid-cols-5 sm:grid-cols-4 gap-4 mt-10">
+    <ul class="grid grid-cols-2 lg:grid-cols-5 sm:grid-cols-4 gap-4 mt-10">
         {posts.map(post => (
-            <li class="w-full aspect-square bg-backgroundAlt bg-cover bg-center bg-no-repeat hover:scale-150 hover:border-[10px] border-[1px] hover:shadow-md hover:z-10 border-background transition-transform" style={`background-image: url(${post.image})`}>
+            <li class="w-full aspect-square bg-backgroundAlt bg-cover bg-center bg-no-repeat sm:hover:scale-150 sm:hover:border-[10px] border-[1px] sm:hover:shadow-md hover:z-10 border-background transition-transform" 
+                style={`background-image: url(${post.image})`}>
                 <a href={post.url} target="_blank" rel="noreferrer" accesskey=""class="w-full h-full inline-block"></a>
             </li>
         ))}
