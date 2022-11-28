@@ -5,7 +5,7 @@ import { social, links } from "../config";
 
 <header class="h-24 absolute w-full overflow-hidden">
     <nav class="flex justify-between center h-full items-center">
-        <ul class="flex sm:space-x-6 uppercase font-semibold tracking-tight w-full justify-evenly sm:justify-start">
+        <ul class="flex sm:space-x-6 uppercase font-medium tracking-tight w-full justify-evenly sm:justify-start">
             {links.map(link => (
                 <li><a class="p-2" href={`#${link.replace(" ", "")}`}>{link}</a></li>
             ))}
