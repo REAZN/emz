@@ -11,7 +11,7 @@ import { posts } from "../config";
         {posts.map(post => (
             <li class="w-full aspect-square bg-backgroundAlt bg-cover bg-center bg-no-repeat sm:hover:scale-150 sm:hover:border-[10px] border-[1px] sm:hover:shadow-md hover:z-10 border-background transition-transform" 
                 style={`background-image: url(${post.image})`}>
-                <a href={post.url} target="_blank" rel="noreferrer" accesskey=""class="w-full h-full inline-block"></a>
+                <a href={post.url} target="_blank" rel="noreferrer" class="w-full h-full inline-block" aria-label="Image of client work" />
             </li>
         ))}
     </ul>
