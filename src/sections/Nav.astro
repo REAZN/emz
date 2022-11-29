@@ -3,11 +3,11 @@ import { Icon } from "astro-icon";
 import { social, links } from "../config";
 ---
 
-<header class="h-24 absolute w-full overflow-hidden">
+<header class="h-24 fixed w-full overflow-hidden z-50 bg-accent transition-all ease-in-out">
     <nav class="flex justify-between center h-full items-center">
         <ul class="flex sm:space-x-6 uppercase font-medium tracking-tight w-full justify-evenly sm:justify-start">
             {links.map(link => (
-                <li><a class="p-2" href={`#${link.replace(" ", "")}`}>{link}</a></li>
+                <li class="relative"><a class="p-2 link" href={`#${link.replace(" ", "")}`}>{link}</a></li>
             ))}
         </ul>
         <ul class="hidden sm:flex items-center space-x-2 sm:space-x-6 text-lg uppercase font-medium">
@@ -23,25 +23,80 @@ import { social, links } from "../config";
 </header>
 
 <style>
+    /* <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-6 h-[2px] bg-text"/> */
     .link::after {
         content: "";
-        /* display: block; */
-        transform: scaleX(0);
-        width: 2em;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: scaleX(0) translateX(-50%);
+        transform-origin: center;
+        width: 20px;
+        height: 2px;
+        background-color: theme("colors.text");
         margin: auto;
         transition: transform 250ms ease-in-out;
-        border-bottom: 2px solid theme("colors.text");
+        /* border-bottom: 2px solid theme("colors.text"); */
     }
 
-    .active {
-        background: blue;
-        transform: scaleX(1);
+    .active::after {
+        transform: scaleX(1) translateX(-50%);
+    }
+
+    .nav-hidden {
+        transform: translateY(-96px);
     }
 </style>
 
 <script>
-    document.querySelectorAll("a[href^='#']").forEach(el => el.addEventListener("click", () => {
-        console.log("HEHHEHHAW", el)
-        el.className += " active"
-    }))
+    const nav = document.querySelector("header");
+    let lastScrollY = window.scrollY;
+    const sections = document.querySelectorAll("section");
+
+    if (nav != null && sections != null) {
+        window.addEventListener("scroll", () => {
+            // if (lastScrollY < window.scrollY) {
+            //     nav.classList.add("nav-hidden");
+            // } else {
+            //     nav.classList.remove("nav-hidden");
+            // }
+            let current: string | null = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute("id"); 
+                }
+            })
+
+            document.querySelectorAll("a[href^='#']").forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("active");
+                }
+            })
+
+            if (window.scrollY > 400 && window.scrollY !> 10) {
+
+                nav.classList.remove("h-24");
+                nav.classList.add("h-14");
+                nav.classList.add("shadow-md");
+            
+            } else {
+                if (window.scrollY < 10) {
+                    nav.classList.add("h-24");
+                    nav.classList.remove("h-14");
+                }
+                nav.classList.remove("shadow-md");
+                // nav.classList.remove("h-14");
+                // nav.classList.add("h-24");
+            }
+
+    
+            lastScrollY = window.scrollY;
+        });
+    }
+    // document.querySelectorAll("a[href^='#']").forEach(el => el.addEventListener("click", () => {
+    //     console.log("HEHHEHHAW", el)
+    //     el.className += " active"
+    // }))
 </script>
