@@ -34,42 +34,42 @@ export const social = [
 export const posts = [
     {
         url: "https://www.instagram.com/p/CjTb1jCrmKH/",
-        image: "/images/posts/1.jpg",
+        image: "/images/posts/1.webp",
     },
     {
         url: "https://www.facebook.com/photo.php?fbid=539414658185028",
-        image: "/images/posts/2.jpg",
+        image: "/images/posts/2.webp",
     },
     {
         url: "https://www.facebook.com/photo.php?fbid=559212249538602",
-        image: "/images/posts/3.jpg",
+        image: "/images/posts/3.webp",
     },
     {
         url: "https://www.facebook.com/photo/?fbid=380022964124199",
-        image: "/images/posts/4.jpg",
+        image: "/images/posts/4.webp",
     },
     {
         url: "https://www.facebook.com/EmzSalon/photos/a.720990101351079/3883419685108089/",
-        image: "/images/posts/5.jpg",
+        image: "/images/posts/5.webp",
     },
     {
         url: "https://www.instagram.com/p/CjTb1jCrmKH/",
-        image: "/images/posts/1.jpg",
+        image: "/images/posts/1.webp",
     },
     {
         url: "https://www.facebook.com/photo.php?fbid=539414658185028",
-        image: "/images/posts/2.jpg",
+        image: "/images/posts/2.webp",
     },
     {
         url: "https://www.facebook.com/photo.php?fbid=559212249538602",
-        image: "/images/posts/3.jpg",
+        image: "/images/posts/3.webp",
     },
     {
         url: "https://www.facebook.com/photo/?fbid=380022964124199",
-        image: "/images/posts/4.jpg",
+        image: "/images/posts/4.webp",
     },
     {
         url: "https://www.facebook.com/EmzSalon/photos/a.720990101351079/3883419685108089/",
-        image: "/images/posts/5.jpg",
+        image: "/images/posts/5.webp",
     },
 ] satisfies {[key: string]: string}[];

@@ -9,7 +9,7 @@ import { posts } from "../config";
     </div>
     <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-10">
         {posts.map(post => (
-            <li class="w-full aspect-square bg-backgroundAlt bg-cover bg-center bg-no-repeat sm:hover:scale-150 sm:hover:border-[10px] border-[1px] sm:hover:shadow-md hover:z-10 border-background transition-transform" 
+            <li class="w-full aspect-square bg-backgroundAlt bg-cover bg-center bg-no-repeat sm:hover:scale-150 sm:hover:border-[10px] border-[1px] sm:hover:shadow-md hover:z-10 border-background transition-transform ease-out" 
                 style={`background-image: url(${post.image})`}>
                 <a href={post.url} target="_blank" rel="noreferrer" class="w-full h-full inline-block" aria-label="Image of client work" />
             </li>

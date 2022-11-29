@@ -5,12 +5,12 @@ import { social, links } from "../config";
 
 <header class="h-24 fixed w-full overflow-hidden z-50 bg-accent transition-all ease-in-out">
     <nav class="flex justify-between center h-full items-center">
-        <ul class="flex sm:space-x-6 uppercase font-medium tracking-tight w-full justify-evenly sm:justify-start">
+        <ul class="flex sm:space-x-4 md:space-x-6 uppercase font-medium tracking-tight w-full justify-evenly sm:justify-start">
             {links.map(link => (
                 <li class="relative"><a class="p-2 link" href={`#${link.replace(" ", "")}`}>{link}</a></li>
             ))}
         </ul>
-        <ul class="hidden sm:flex items-center space-x-2 sm:space-x-6 text-lg uppercase font-medium">
+        <ul class="hidden sm:flex items-center space-x-2 md:space-x-6 text-lg uppercase font-medium">
             {social.map(social => (
                 <li class="hover:scale-110 transition-transform">
                     <a href={social.url} target="_blank" rel="noreferrer" aria-label={social.title}>
@@ -30,7 +30,6 @@ import { social, links } from "../config";
         position: absolute;
         left: 50%;
         transform: scaleX(0) translateX(-50%);
-        transform-origin: center;
         width: 20px;
         height: 2px;
         background-color: theme("colors.text");

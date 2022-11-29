@@ -4,9 +4,9 @@ import { social, details } from "../config";
 ---
 
 <footer id="findus">
-    <div id="grid" class="grid grid-cols-1 md:center md:mb-10">
+    <div id="grid" class="grid grid-cols-1 md:center sm:mb-10">
 
-        <div class="bg-backgroundAlt flex flex-col justify-center items-center aspect-square md:aspect-auto lg:aspect-square sm:py-12 gap-6 order-3 lg:order-1">
+        <div class="bg-backgroundAlt relative flex flex-col justify-center items-center aspect-square sm:aspect-auto lg:aspect-square sm:py-12 gap-6 order-3 lg:order-1">
             <img src="/images/logo.svg" width="220" alt="Em'z"/>
             <span class="font-bold text-sm">GET IN TOUCH</span>
             <ul class="flex items-center space-x-4 text-lg uppercase font-medium">
@@ -18,13 +18,17 @@ import { social, details } from "../config";
                     </li>
                 ))}
             </ul>
+            <div class="flex flex-col absolute left-1/2 -translate-x-1/2 bottom-2 w-full text-center text-sm">
+                <span>2016 - {new Date().getFullYear()}</span>
+                <a href="https://github.com/reazn" aria-label="Link to website authors GutHub">Made by Lewis Thompson</a>
+            </div>
         </div>
 
         <div class="bg-accent flex flex-col justify-center items-center aspect-square order-1">
             <div class="aspect-square space-y-6">
                 <h2 class="font-bold text-3xl">FIND US</h2>
                 <h3 class="font-bold text-xl">ADDRESS</h3>
-                <span class="whitespace-pre-wrap font-medium">{details.address}</span>
+                <address class="whitespace-pre-wrap font-medium not-italic">{details.address}</address>
                 <h3 class="font-bold text-xl">HOURS</h3>
                 <span class="whitespace-pre-wrap font-medium uppercase">{details.hours}</span>
             </div>

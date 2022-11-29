@@ -7,7 +7,7 @@ import { services } from "../services";
         <div class="w-[2px] h-10 bg-accent"/>
         <h2 class="font-bold text-sm">WHAT WE OFFER</h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-14 sm:mt-20 gap-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-14 sm:mt-20 gap-10 sm:gap-14 lg:gap-32">
         {services.map(service => (
             <div class="flex flex-col gap-5">
                 <h3 class="text-4xl font-stix">{service.title}</h3>
@@ -15,7 +15,7 @@ import { services } from "../services";
                 <p>{service.description}</p>
                 {service.categories.map(category => (
                     <ul class="space-y-2">
-                        <h4 class="font-bold text-xl">{category.title}</h4>
+                        <li><h4 class="font-bold text-xl">{category.title}</h4></li>
                         {category.service.map(service => (
                             <>
                                 <li class="flex flex-row gap-4 font-medium items-center whitespace-nowrap">
