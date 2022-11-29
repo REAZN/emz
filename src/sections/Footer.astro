@@ -3,10 +3,10 @@ import { Icon } from "astro-icon";
 import { social, details } from "../config";
 ---
 
-<footer>
-    <div id="grid" class="grid grid-cols-1 md:center sm:mb-10">
+<footer id="findus">
+    <div id="grid" class="grid grid-cols-1 md:center md:mb-10">
 
-        <div class="bg-backgroundAlt flex flex-col justify-center items-center aspect-square sm:aspect-auto sm:py-14 gap-6 order-3 lg:order-1">
+        <div class="bg-backgroundAlt flex flex-col justify-center items-center aspect-square md:aspect-auto lg:aspect-square sm:py-12 gap-6 order-3 lg:order-1">
             <img src="/images/logo.svg" width="220" alt="Em'z"/>
             <span class="font-bold text-sm">GET IN TOUCH</span>
             <ul class="flex items-center space-x-4 text-lg uppercase font-medium">
@@ -56,7 +56,8 @@ import { social, details } from "../config";
 
     @media screen(lg) {
         #grid {
-            grid-template-columns: 1fr 1fr 1fr;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
         #grid > :nth-child(1) {
             grid-column: span 1;
