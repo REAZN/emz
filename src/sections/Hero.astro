@@ -1,12 +1,11 @@
 ---
-import { social } from "../config";
-import { Icon } from "astro-icon";
 import Button from "../components/Button.astro";
+import { Image } from "@astrojs/image/components";
 ---
 
-<section id="home" class="w-full h-fit pt-24 pb-14 bg-accent">
+<section id="home" class="w-full h-fit pt-32 pb-14 bg-accent">
     <div class="flex flex-col w-fit h-full m-auto text-center justify-center items-center space-y-2">
-        <img src="/images/logo.svg" width="220" alt="Em'z"/>
+        <Image src="/images/logo.svg" width="220" height="137" alt="Em'z" />
         <h1>HAIR, NAILS & BEAUTY</h1>
         <div class="flex space-x-3 pt-8">
             <Button href="#services" weight="font-thin">BOOK NOW</Button>
