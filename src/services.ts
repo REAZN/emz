@@ -1,7 +1,6 @@
 
 interface Services {
     title: string;
-    description: string;
     categories: {
         title?: string;
         service: {
@@ -15,7 +14,6 @@ interface Services {
 export const services: Services[] = [
     {
         title: "All about the hair",
-        description: "Lorem ipsum dolor sit amet consectetur. Vel volutpat quam platea elementum velit est amet eget arcu.",
         categories: [
             {
                 title: "Cutting",
@@ -116,10 +114,9 @@ export const services: Services[] = [
     },
     {
         title: "Nailed it",
-        description: "Lorem ipsum dolor sit amet consectetur. Vel volutpat quam platea elementum velit est amet eget arcu.",
         categories: [
             {
-                title: "Get Nails",
+                title: "Gel Nails",
                 service: [
                     {
                         name: "Gel Polish",
@@ -136,6 +133,14 @@ export const services: Services[] = [
                     {
                         name: "Gel Soak Off and New Set",
                         price: "£18",
+                    },
+                    {
+                        name: "Hard Gel",
+                        price: "£19",
+                    },
+                    {
+                        name: "Hard Gel Infill & Recolour",
+                        price: "£22",
                     },
                     {
                         name: "Gel Soak Off, File and Buff",
@@ -163,7 +168,7 @@ export const services: Services[] = [
                         price: "From £30",
                     },
                     {
-                        name: "Acrylic Overlay and Hel Polish",
+                        name: "Acrylic Overlay and Gel Polish",
                         price: "£25",
                     },
                     {
@@ -184,7 +189,6 @@ export const services: Services[] = [
     },
     {
         title: "Everything Beauty",
-        description: "Lorem ipsum dolor sit amet consectetur. Vel volutpat quam platea elementum velit est amet eget arcu.",
         categories: [
             {
                 title: "Waxing and Tinting",
@@ -224,10 +228,6 @@ export const services: Services[] = [
                     {
                         name: "1/2 Leg Wax",
                         price: "£17",
-                    },
-                    {
-                        name: "Bikini Wax",
-                        price: "£15",
                     },
                 ]
             },
@@ -277,7 +277,6 @@ export const services: Services[] = [
     },
     {
         title: "Love your Body",
-        description: "Lorem ipsum dolor sit amet consectetur. Vel volutpat quam platea elementum velit est amet eget arcu.",
         categories: [
             {
                 title: "Full Body",
@@ -317,50 +316,50 @@ export const services: Services[] = [
             },
         ]
     },
-    {
-        title: "Mens Groom Room",
-        description: "Lorem ipsum dolor sit amet consectetur. Vel volutpat quam platea elementum velit est amet eget arcu.",
-        categories: [
-            {
-                service: [
-                    {
-                        name: "Gents Cut",
-                        price: "£12",
-                    },
-                    {
-                        name: "Back, Neck & Shoulder Massage (30 mins)",
-                        price: "£25",
-                    },
-                    {
-                        name: "Back Wax",
-                        price: "£25",
-                    },
-                    {
-                        name: "Chest Wax",
-                        price: "£20",
-                    },
-                    {
-                        name: "Nasal/Ear Wax",
-                        price: "£5",
-                    },
-                    {
-                        name: "Eyebrow Wax",
-                        price: "£6",
-                    },
-                    {
-                        name: "Energising Facial",
-                        price: "£30",
-                    },
-                    {
-                        name: "Deep Cleanse Facial",
-                        price: "£35",
-                    },
-                    {
-                        name: "Deluxe Facial",
-                        price: "£45",
-                    },
-                ]
-            },
-        ]
-    },
+    // {
+    //     title: "Mens Groom Room",
+    //     description: "Lorem ipsum dolor sit amet consectetur. Vel volutpat quam platea elementum velit est amet eget arcu.",
+    //     categories: [
+    //         {
+    //             service: [
+    //                 {
+    //                     name: "Gents Cut",
+    //                     price: "£12",
+    //                 },
+    //                 {
+    //                     name: "Back, Neck & Shoulder Massage (30 mins)",
+    //                     price: "£25",
+    //                 },
+    //                 {
+    //                     name: "Back Wax",
+    //                     price: "£25",
+    //                 },
+    //                 {
+    //                     name: "Chest Wax",
+    //                     price: "£20",
+    //                 },
+    //                 {
+    //                     name: "Nasal/Ear Wax",
+    //                     price: "£5",
+    //                 },
+    //                 {
+    //                     name: "Eyebrow Wax",
+    //                     price: "£6",
+    //                 },
+    //                 {
+    //                     name: "Energising Facial",
+    //                     price: "£30",
+    //                 },
+    //                 {
+    //                     name: "Deep Cleanse Facial",
+    //                     price: "£35",
+    //                 },
+    //                 {
+    //                     name: "Deluxe Facial",
+    //                     price: "£45",
+    //                 },
+    //             ]
+    //         },
+    //     ]
+    // },
 ]
