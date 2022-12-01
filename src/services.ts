@@ -1,6 +1,7 @@
 
 interface Services {
     title: string;
+    id: string;
     categories: {
         title?: string;
         service: {
@@ -14,6 +15,7 @@ interface Services {
 export const services: Services[] = [
     {
         title: "All about the hair",
+        id: "hair",
         categories: [
             {
                 title: "Cutting",
@@ -114,6 +116,7 @@ export const services: Services[] = [
     },
     {
         title: "Nailed it",
+        id: "nails",
         categories: [
             {
                 title: "Gel Nails",
@@ -189,6 +192,7 @@ export const services: Services[] = [
     },
     {
         title: "Everything Beauty",
+        id: "beauty",
         categories: [
             {
                 title: "Waxing and Tinting",
@@ -277,6 +281,7 @@ export const services: Services[] = [
     },
     {
         title: "Love your Body",
+        id: "body",
         categories: [
             {
                 title: "Full Body",
