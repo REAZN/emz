@@ -252,31 +252,6 @@ export const services: Services[] = [
                     },
                 ]
             },
-            {
-                title: "Facials",
-                service: [
-                    {
-                        name: "Dermaplaning",
-                        price: "£15",
-                    },
-                    {
-                        name: "Express Facial",
-                        price: "£15",
-                    },
-                    {
-                        name: "Deluxe Facial",
-                        price: "£40",
-                    },
-                    {
-                        name: "Deluxe Facial with LED",
-                        price: "£50",
-                    },
-                    {
-                        name: "Chemical Pell",
-                        price: "£50",
-                    },
-                ]
-            },
         ]
     },
     {
