@@ -9,8 +9,13 @@ export const details = {
 
 export const social = [
     {
+        title: "Phone",
+        url: `tel:${details.phone}`,
+        icon: "ic:round-local-phone",
+    },
+    {
         title: "Mail",
-        url: "mailto:emzsalon.co.uk?subject=Enquiry",
+        url: "mailto:emily@emzsalon.co.uk?subject=Enquiry",
         icon: "ic:twotone-mail-outline",
     },
     {
