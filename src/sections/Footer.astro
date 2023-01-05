@@ -25,10 +25,12 @@ import { social, details } from "../config";
         </div>
 
         <div class="bg-accent flex flex-col justify-center items-center aspect-square order-1">
-            <div class="aspect-square space-y-6">
+            <div class="aspect-square space-y-4">
                 <h2 class="font-bold text-3xl">FIND US</h2>
+                <h3 class="font-bold text-xl">PHONE</h3>
+                <a href={`tel:${details.phone}`} class="whitespace-pre-wrap font-medium not-italic">{details.phone}</a>
                 <h3 class="font-bold text-xl">ADDRESS</h3>
-                <address class="whitespace-pre-wrap font-medium not-italic">{details.address}</address>
+                <span class="whitespace-pre-wrap font-medium not-italic">{details.address}</span>
                 <h3 class="font-bold text-xl">HOURS</h3>
                 <span class="whitespace-pre-wrap font-medium uppercase">{details.hours}</span>
             </div>
