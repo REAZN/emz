@@ -21,12 +21,12 @@ export const services: Services[] = [
                 title: "Cutting",
                 service: [
                     {
-                        name: "Cut and Finish",
-                        price: "£30",
+                        name: "Cut and Blow Dry",
+                        price: "£33",
                     },
                     {
-                        name: "Re-Style and Finish",
-                        price: "£35",
+                        name: "Re-Style and Blow Dry",
+                        price: "£38",
                     },
                     {
                         name: "Ladies Wet/Dry Cut",
@@ -51,7 +51,7 @@ export const services: Services[] = [
                     },
                     {
                         name: "Add Waves/Curls to Your Service",
-                        price: "£5",
+                        price: "£7",
                     },
                     {
                         name: "Straightening",
@@ -63,7 +63,7 @@ export const services: Services[] = [
                     },
                     {
                         name: "Heated Rollers",
-                        price: "£15",
+                        price: "£20",
                     },
                     {
                         name: "Hair Ups",
@@ -76,15 +76,15 @@ export const services: Services[] = [
                 service: [
                     {
                         name: "Root Application",
-                        price: "£32",
+                        price: "£33",
                     },
                     {
                         name: "Full Head Tint",
-                        price: "£42",
+                        price: "£43",
                     },
                     {
                         name: "T-Section",
-                        price: "£35",
+                        price: "£36",
                     },
                     {
                         name: "Half Head Foils",
@@ -92,19 +92,15 @@ export const services: Services[] = [
                     },
                     {
                         name: "Full Head Foils",
-                        price: "£57",
+                        price: "£58",
                     },
                     {
                         name: "Balayage/Ombre",
                         price: "P.O.A",
                     },
                     {
-                        name: "Add a Blow Dry",
-                        price: "£10",
-                    },
-                    {
                         name: "Add a Cut and Blow Dry",
-                        price: "£20",
+                        price: "£25",
                     },
                     {
                         name: "Toner",
@@ -122,36 +118,28 @@ export const services: Services[] = [
                 title: "Gel Nails",
                 service: [
                     {
-                        name: "Gel Polish",
-                        price: "£15",
+                        name: "Gel Fingers",
+                        price: "£17",
                     },
                     {
                         name: "Gel Toes",
                         price: "£15",
                     },
                     {
-                        name: "Gel Nails and Toes",
-                        price: "£25",
+                        name: "Gel Fingers and Toes",
+                        price: "£30",
                     },
                     {
                         name: "Gel Soak Off and New Set",
-                        price: "£18",
-                    },
-                    {
-                        name: "Hard Gel",
-                        price: "£19",
-                    },
-                    {
-                        name: "Hard Gel Infill & Recolour",
-                        price: "£22",
+                        price: "£20",
                     },
                     {
                         name: "Gel Soak Off, File and Buff",
                         price: "£5",
                     },
                     {
-                        name: "File, Buff and Polish",
-                        price: "£12",
+                        name: "Hard Gel Overlay",
+                        price: "£22",
                     },
                 ]
             },
@@ -160,23 +148,23 @@ export const services: Services[] = [
                 service: [
                     {
                         name: "Full Set of Acrylic and Gel Polish",
-                        price: "£30",
+                        price: "£32",
                     },
                     {
                         name: "Acrylic Infill and Gel Polish",
-                        price: "£24",
-                    },
-                    {
-                        name: "Full Set of Acrylic With Design",
-                        price: "From £30",
-                    },
-                    {
-                        name: "Acrylic Overlay and Gel Polish",
                         price: "£25",
                     },
                     {
+                        name: "Full Set of Acrylic With Design",
+                        price: "From £35",
+                    },
+                    {
+                        name: "Acrylic Overlay and Gel Polish",
+                        price: "£28",
+                    },
+                    {
                         name: "French, Pink and White Ombre",
-                        price: "£33",
+                        price: "£35",
                     },
                     {
                         name: "Soak Off with a New Set",
@@ -199,19 +187,19 @@ export const services: Services[] = [
                 service: [
                     {
                         name: "Eyebrow Wax",
-                        price: "£6",
+                        price: "£8",
                     },
                     {
                         name: "Eyebrow Tint",
-                        price: "£6",
+                        price: "£10",
                     },
                     {
                         name: "Eyebrow Wax and Tint",
-                        price: "£10",
+                        price: "£15",
                     },
                     {
                         name: "Eyelash Tint",
-                        price: "£10",
+                        price: "£12",
                     },
                     {
                         name: "Lip or Chin Wax",
@@ -239,16 +227,12 @@ export const services: Services[] = [
                 title: "Lashes and Brows",
                 service: [
                     {
-                        name: "Eyebrow Lamination",
+                        name: "Eyebrow Lamination, Tint & Wax",
                         price: "£30",
                     },
                     {
-                        name: "Lash Lift",
+                        name: "Lash Lift & Tint",
                         price: "£30",
-                    },
-                    {
-                        name: "Brow Lamination & Lash Lift",
-                        price: "£50",
                     },
                 ]
             },
