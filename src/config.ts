@@ -4,7 +4,7 @@ export const links: string[] = ["home", "about", "feed", "services", "find us"];
 export const details = {
     address: "390 Vicarage Lane\nBlackpool\nFY4 4LP",
     phone: "01253 380711",
-    hours: "Tue - Fri  10am - 7pm\nSat  10am - 4am",
+    hours: "Tue - Fri  10am - 7pm\nSat  10am - 4pm",
 }
 
 export const social = [
